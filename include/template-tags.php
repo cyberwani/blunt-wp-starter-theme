@@ -2,6 +2,31 @@
 	
 	/* Tags for your templates */
 	
+	function blunt_abs_url($url) {
+		/*
+				I use a plugin called Root Relative URLs
+				The problem is that sometimes urls should be absolute
+				This function will convert urls back to absolute when needed
+		*/
+		$new_url = $url;
+		if (!preg_match('#^https?://#', $url)) {
+			$new_url = 'http';
+			if (is_ssl()) {
+				$new_url .= 's';
+			}
+			$new_url .= '//'.$_SERVER['HTTP_HOST'];
+			$path = $url;
+			if (substr($url, 0, 1) == '..') {
+				// check for relative just in case
+				$abspath = substr(ABSPATH, 0, strlen(ABSPATH)-1);
+				$path = dirname($abspath.$_SERVER['REQUEST_URI']).'/'.$url;
+				$path = str_replace($abspath, '', realpath($path));
+			}
+			$new_url .= $path;
+		}
+		return $new_url;
+	} // end function blunt_abs_url
+	
 	function blunt_post_meta($show_author=true) {
 		$categories_list = get_the_category_list(', ');
 		$tag_list = get_the_tag_list('', ', ', '');
