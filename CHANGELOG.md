@@ -1,0 +1,4 @@
+## BLUNT WP STARTER THEME CHANGELOG & HISTORY
+
+**Version 1.0.0** 
+- 

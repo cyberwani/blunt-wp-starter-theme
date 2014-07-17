@@ -1,0 +1,116 @@
+/*
+  Theme Name: Blunt WP Startter Theme
+  Theme URI: https://github.com/Hube2/blunt-wp-starter-theme
+  Author: John A. Huebner II (Hube2)
+  Author URI: https://github.com/Hube2/
+  Description: 
+  Version: 1.0.2
+  License: GNU General Public License v2 or later
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+  Tags: 
+  Text Domain: 
+  
+  This is my bare-bones, no-frils starter theme. It has all the thinks that I want and none of the things I want to avoid.
+  Do with it as you will.
+  You should rename it at a minimum and put some description here that makes sense for your new theme
+*/
+
+/* Reset - 
+      Yes, this is all I reset because I do not believe in them. 
+      Add your favorite reset here if you really enjoy reworking the styles of every element yourself. 
+*/
+* {
+  margin-top: 0;
+}
+
+/* Start Standard WP Styles */
+.alignright {
+  float:right;
+  margin: 0 0 1em 1em;
+}
+
+.alignleft. {
+  float:left; 
+  margin: 0 1em 1em 0;
+}
+
+.aligncenter {
+  display: block; 
+  margin: 1em auto; 
+}
+
+.wp-caption {}
+.wp-caption-text {}
+.gallery-caption {}
+.sticky {}
+.bypostauthor {}
+/* End Standard WP Styles */
+
+/* My Clear Fix */
+.clearfix {
+  width: 100%;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+/* Add your base styles here */
+
+
+/* end your base styles here */
+
+/* Media Queries Below */
+
+/* Medial Queries Here
+/* TINY MOBILE DEVICES */
+@media only screen and (max-width: 319px) {
+  
+}
+
+/* SMALL SIZED MOBILE DEVICES */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  
+}
+
+/* MID SIZED MOBILE DEVICES */
+@media only screen and (min-width: 481px) and (max-width: 639px) {
+  
+}
+
+/* LARGER MOBILE DEVICES */
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+  
+}
+
+/* TABLET & SMALLER LAPTOPS */
+@media only screen and (min-width: 768px) and (max-width: 1020px) {
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1021px) and (max-width: 1239px)  {
+  
+}
+
+/* LARGE VIEWING SIZE */
+@media only screen and (min-width: 1240px) {
+  
+}
+
+/*********************
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*********************/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+    
+}
+
+/* PRINT STYLESHEET */
+@media print {
+  
+}

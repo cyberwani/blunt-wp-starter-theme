@@ -1,0 +1,1 @@
+This folder is used by ACF 5 to save JSON files of field groups to speed up site.
