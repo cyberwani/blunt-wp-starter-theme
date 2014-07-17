@@ -3,6 +3,7 @@
 	/* 
 		
 		this file gives some examples of rewrite rules and how to add them
+		
 		see:
 			http://codex.wordpress.org/Rewrite_API/add_rewrite_tag
 			http://codex.wordpress.org/Rewrite_API/add_rewrite_rule

@@ -13,9 +13,8 @@
 				[Sidebar Before Content]
 			</div>
 			<div id="content">
+				<h1 id="page-title"><?php the_title(); ?></h1>
 				<?php 
-					// include content from home page if it exists
-					?><h1 id="page-title"><?php the_title(); ?></h1><?php 
 					the_content();
 				?>
 			</div>

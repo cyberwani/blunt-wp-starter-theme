@@ -55,7 +55,7 @@
 											'next_text' => 'Older Posts',
 											'prev_char' => '&laquo',
 											'next_char' => '&raquo;')
-				$location = 'class name of class names to add to nav menu'
+				$location = 'class name or class names to add to nav menu'
 		*/
 		global $wp_query;
 		$prev_text = 'Newer Posts';

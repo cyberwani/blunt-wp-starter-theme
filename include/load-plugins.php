@@ -1,7 +1,6 @@
 <?php 
 	
 	/*
-			
 			Any plugins that you place into the includes/plugins 
 			folder will be autoloaded by this file
 			
@@ -11,8 +10,6 @@
 			be vewwwy vewwwy carful
 			
 	*/
-	
-	// get_plugin_data( $plugin_file, $markup = true, $translate = true )
 	
 	$blunt_plugin_path = dirname(__FILE__).'/plugins';
 	$plugin_list = blunt_get_plugin_list($blunt_plugin_path);

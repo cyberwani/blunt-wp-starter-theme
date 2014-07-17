@@ -17,14 +17,16 @@
 		}
 		
 		// some examples follow
-		// modfiy products and tech papers to show all
-		if ($query->query_vars['post_type'] == 'product') {
+		
+		// modfiy a custom post type to show all
+		if ($query->query_vars['post_type'] == 'my-custom-post-type-slug') {
 			$query->set('posts_per_page', -1);
 			$query->set('orderby', 'menu_order title');
 			$query->set('order', 'ASC');
 		}
 		
-		if (is_tax() && isset($query->query['rep-type'])) {
+		// modify a custom taxonomy query to show all
+		if (is_tax() && isset($query->query['my-custom-taxonomy-slug'])) {
 			$query->set('posts_per_page', -1);
 			$query->set('orderby', 'menu_order title');
 			$query->set('order', 'ASC');

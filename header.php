@@ -28,15 +28,13 @@
 				<div id="logo"><a href="/"><?php bloginfo('name'); ?></a></div>
 				<div id="top-nav">
 					<?php 
-						$args = array(
-							'theme_location'	=> 'top-menu',
-							'container'			 => false,
-							'menu_class'			=> 'top-menu',
-							'echo'						=> true,
-							'fallback_cb'		 => false,
-							'items_wrap'			=> '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							'depth'					 => -1
-						);
+						$args = array('theme_location' => 'top-menu',
+													'container' => false,
+													'menu_class' => 'top-menu',
+													'echo' => true,
+													'fallback_cb' => false,
+													'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+													'depth' => -1);
 						wp_nav_menu($args);
 					?>
 				</div>
@@ -49,16 +47,14 @@
 			</div>
 			<div id="main-nav">
 				<?php 
-						$args = array(
-							'theme_location'	=> 'main-menu',
-							'container'			 => false,
-							'menu_class'			=> 'main-menu',
-							'echo'						=> true,
-							'fallback_cb'		 => 'wp_page_menu',
-							'items_wrap'			=> '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							'depth'					 => -1
-						);
-						wp_nav_menu($args);
+					$args = array('theme_location' => 'main-menu',
+												'container' => false,
+												'menu_class' => 'main-menu',
+												'echo' => true,
+												'fallback_cb' => 'wp_page_menu',
+												'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+												'depth' => 0);
+					wp_nav_menu($args);
 				?>
 			</div>
 			<div id="body">
