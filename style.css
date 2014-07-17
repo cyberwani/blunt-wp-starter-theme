@@ -1,5 +1,5 @@
 /*
-	Theme Name: Blunt WP Startter Theme
+	Theme Name: Blunt WP Starter Theme
 	Theme URI: https://github.com/Hube2/blunt-wp-starter-theme
 	Author: John A. Huebner II (Hube2)
 	Author URI: https://github.com/Hube2/
@@ -10,9 +10,9 @@
 	Tags: 
 	Text Domain: 
 	
-	This is my bare-bones, no-frils starter theme. It has all the thinks that I want and none of the things I want to avoid.
-	Do with it as you will.
-	You should rename it at a minimum and put some description here that makes sense for your new theme
+	© 2011-2014 John A. Huebner II
+	
+	...however, once you've significantly changed the theme to build your own unique project, either for yourself or for a client under a different theme name (as is encouraged) you're entirely welcome to copyright and license that project as you see fit.
 */
 
 /* Reset - 
@@ -23,7 +23,9 @@
 	margin-top: 0;
 }
 
-/* Start Standard WP Styles */
+/* Start Standard WP Styles
+			These are the styles that are required by the WP theme guidelines
+*/
 .alignright {
 	float:right;
 	margin: 0 0 1em 1em;
@@ -63,7 +65,7 @@
 
 /* Media Queries Below */
 
-/* Medial Queries Here
+/* Medial Queries Here (not sure why I'm including this)
 /* TINY MOBILE DEVICES */
 @media only screen and (max-width: 319px) {
 	
