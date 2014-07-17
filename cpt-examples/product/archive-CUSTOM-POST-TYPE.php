@@ -1,10 +1,10 @@
 <?php
-  /*
-      The template for showing a custom post type archive
-      copy this file and replace "CUSTOM-POST-TYPE" with your custom post type slug
+	/*
+			The template for showing a custom post type archive
+			copy this file and replace "CUSTOM-POST-TYPE" with your custom post type slug
 			
 			This template also includes the basic schema.org markup for "Product"
-  */
+	*/
 	
 	get_header();
 ?>
@@ -24,12 +24,12 @@
 							while (have_posts()) {
 								?>
 									<div class="product" itemscope itemtype="http://schema.org/Product">
-                  	<h2><a itemprop="url" href="<?php 
+										<h2><a itemprop="url" href="<?php 
 												the_permalink(); ?>"><span itemprop="name"><?php the_title(); ?></span></a>
-                    </h2>
-                    <p itemprop="description"><?php the_excerpt(); ?></p>
-                    <p><a itemprop="url" href="<?php the_permalink(); ?>">More Information</a></p>
-                  </div>
+										</h2>
+										<p itemprop="description"><?php the_excerpt(); ?></p>
+										<p><a itemprop="url" href="<?php the_permalink(); ?>">More Information</a></p>
+									</div>
 								<?php 
 							} // end while have_posts
 						?>
