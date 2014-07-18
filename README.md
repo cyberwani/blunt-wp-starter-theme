@@ -24,3 +24,8 @@ Schema.Org Markup
 -----------------
 
 See [http://schema.org/](http://schema.org/)
+
+There are very few themes available that already incorporate basic schema.org markup, especially for anyone that wants to use WP for more than a blog. I've looked at the plugin solutions, but they are not really solutions since you either need to do 1 of 3 things that are all bad practices:
+* Let the plugin format your content
+* Duplicate the content, once in natural form and once in a block created by the plugin
+* Use hidden markup <meta> tags in the content
