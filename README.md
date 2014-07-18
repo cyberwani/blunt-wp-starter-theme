@@ -1,7 +1,7 @@
 Blunt WP Starter Theme
 ======================
 
-This is not quite ready yet, there are still a few changes that need to be made.
+This is not quite ready yet, there are still a few changes that need to be made, but it's close. I still need to add additional chaching of fragments and objects as well as more templates for custom post types and taxonomies using different schema.org markup.
 
 © 2014 John A. Huebner II
 GNU General Public License | https://www.gnu.org/licenses/gpl.html
