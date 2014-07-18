@@ -77,3 +77,5 @@ This theme encorporates my own caching plugin Blunt Cache, you can find it in th
 but it can also be used as a full page cache on pages that won't break when cached.
 If you use another cache, the code I've included in the template files can simply
 be ignored, or if you really want to you can remove it.
+
+Full Page Caching
