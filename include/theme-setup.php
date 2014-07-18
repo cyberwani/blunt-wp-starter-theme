@@ -2,6 +2,10 @@
 	
 	/* Theme Setup Functions */
 	
+	// for my plugin Blunt Cache
+	// turn full page caching on/off
+	define('BLUNT_CACHE_FULL_PAGE', true);
+	
 	// when this is set to false, certain main items are hidden
 	// see function blunt_remove_menus()
 	define('BLUNT_DEV', false);
@@ -14,6 +18,7 @@
 	
 	// set up blunt-cache default ttl
 	function set_blunt_cache_ttl($ttl) {
+		// change the value to what you need, I like 6 hours
 		$ttl = 60 * 60 * 6; // 6 hours
 		return $ttl;
 	}

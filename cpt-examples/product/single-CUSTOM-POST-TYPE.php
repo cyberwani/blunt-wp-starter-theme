@@ -6,27 +6,31 @@
 			This template also includes the basic schema.org markup for "Product"
 	*/
 	
-	get_header();
-	
-	while (have_posts()) {
-		the_post();
-		?>
-			<div id="sidebar-before-content">
-				[Sidebar Before Content]
-			</div>
-			<div id="content" itemscope itemtype="http://schema.org/Product">
-				<h1 id="page-title" itemprop="name"><?php the_title(); ?></h1>
-				<div class="content-body" itemprop="description">
-					<?php 
-						the_content();
-					?>
+	$key = 'FULL PAGE'.$_SERVER['REQUEST_URI'];
+	if (!BLUNT_CACHE_FULL_PAGE || !apply_filters('blunt_cache_frag_check', false, $key)) {
+		get_header();
+		while (have_posts()) {
+			the_post();
+			?>
+				<div id="sidebar-before-content">
+					[Sidebar Before Content]
 				</div>
-			</div>
-			<div id="sidebar-after-content">
-				[Sidebar After Content]
-			</div>
-		<?php 
-	} // end while have posts	
-	
-	get_footer();
+				<div id="content" itemscope itemtype="http://schema.org/Product">
+					<h1 id="page-title" itemprop="name"><?php the_title(); ?></h1>
+					<div class="content-body" itemprop="description">
+						<?php 
+							the_content();
+						?>
+					</div>
+				</div>
+				<div id="sidebar-after-content">
+					[Sidebar After Content]
+				</div>
+			<?php 
+		} // end while have posts	
+		get_footer();
+	}
+	if (BLUNT_CACHE_FULL_PAGE) {
+		do_action('blunt_cache_frag_output_save', $key);
+	}
 ?>
