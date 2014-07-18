@@ -26,10 +26,13 @@ It does have some things that I consider required that you won't see elsewhere
 though. Functions I frequently use; schema.org markup; well laid out areas and 
 files so I can easily find/add/modify what needs changing.
 
-Guiding principle [YAGNI](http://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), I've stripped out the 95% that I'm never gonna use and 
-kept or added only those things that I know I'm gonna need and use most of the time.
+Guiding principle [YAGNI](http://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), 
+I've stripped out the 95% that I'm never gonna use and kept or added only those 
+things that I know I'm gonna need and use most of the time.
 
-Read through the files, if you like what you see then use it or branche it, if you don't like it I'm sure there's a starter theme out there that is trying to be everything to every developer that will suit your needs.
+Read through the files, if you like what you see then use it or branche it, if 
+you don't like it I'm sure there's a starter theme out there that is trying to 
+be everything to every developer that will suit your needs.
 
 
 Schema.Org Markup
