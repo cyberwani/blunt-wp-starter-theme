@@ -82,4 +82,28 @@ be ignored, or if you really want to you can remove it.
 I have created a form of full page caching and implemented it in this theme. If you
 are using my caching plugin you can remove it by changing the value in this define
 statement that you'll find in /include/theme-setup.php to false.
-```define('BLUNT_CACHE_FULL_PAGE', true)```
+
+```define('BLUNT_CACHE_FULL_PAGE', true);```
+
+You will find code like the following in the main template files. I thought it should
+be explained because it might confuse some people. It is an alteration of the code
+you will find in the documentation for the fragment cache in Blunt Cache.
+
+```
+  $key = 'FULL PAGE'.$_SERVER['REQUEST_URI'];
+  if (!BLUNT_CACHE_FULL_PAGE || !apply_filters('blunt_cache_frag_check', false, $key)) {
+    /* The code of the template will be found here
+     * The above if statement can be confusing to grasp which is why I'm explaining it
+     * In the above if statement, do to the way if statements work in PHP if 
+     * BLUNT_CACHE_FULL_PAGE is false then this block will always be executed. this is
+     * due to short-circuit evaluation. Since the first part of the || is true then
+     * there is no need to perform the second part of the statement. Since the second
+     * part of the || is not evaluated caching is never turned on.
+     * Caching will of the full page will only happen if the first part of the 
+     * statement evaluates to false which means BLUNT_CACHE_FULL_PAGE === true
+     */
+  }
+  if (BLUNT_CACHE_FULL_PAGE) {
+    do_action('blunt_cache_frag_output_save', $key);
+  }
+```
