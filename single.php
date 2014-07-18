@@ -24,12 +24,12 @@
 			<?php 
 		} // end while have posts
 		?>
-      <div id="sidebar-after-content">
-        <?php get_sidebar('blog'); ?>
-      </div>
-    <?php 
+			<div id="sidebar-after-content">
+				<?php get_sidebar('blog'); ?>
+			</div>
+		<?php 
 		get_footer();
-	}
+	} // end while have_posts
 	if (BLUNT_CACHE_FULL_PAGE) {
 		do_action('blunt_cache_frag_output_save', $key);
 	}

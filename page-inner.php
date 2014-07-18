@@ -20,5 +20,5 @@
 				[Sidebar After Content]
 			</div>
 		<?php 
-	} // end while have posts	
+	} // end while have posts
 ?>
