@@ -65,8 +65,6 @@ specific schema types
 Caching
 -------
 
-I am in the process on implementing fragment and object caching into this theme.
-
 In most cases I am unable to use a full page cache in the sites I build. The 
 reasons for this are complex but there is usally data that cannot be cached on 
 almost every page of a site. This can be as simple as a short contact form that
@@ -74,7 +72,7 @@ appears on 99% of the site's pages. The hidden data in the form that prevents
 spam must be refreshed on every page load and it is different on every page load.
 Combine that with a full page cache and all the forms break.
 
-This theme encorporates my own caching plugin Blunt Cache, you can find it in the
+This theme incorporates my own caching plugin Blunt Cache, you can find it in the
 [WordPress Repository](http://wordpress.org/plugins/blunt-cache/) or [here on GitHub](https://github.com/Hube2/blunt-cache). It is a fragment and object cache,
 but it can also be used as a full page cache on pages that won't break when cached.
 If you use another cache, the code I've included in the template files can simply
@@ -82,30 +80,29 @@ be ignored, or if you really want to you can remove it.
 
 *Full Page Caching*
 I have created a form of full page caching and implemented it in this theme. If you
-are using my caching plugin you can remove it by changing the value in this define
-statement that you'll find in /include/theme-setup.php to false.
-
-```define('BLUNT_CACHE_FULL_PAGE', true);```
+are using my caching plugin you can remove it by altering the function
+blunt_cache_full_page_setup() in the file /includ/theme-setup.php.
 
 You will find code like the following in the main template files. I thought it should
-be explained because it might confuse some people. It is an alteration of the code
+be explained because the logic might confuse some people. It is an alteration of the code
 you will find in the documentation for the fragment cache in Blunt Cache.
 
 ```
   $key = 'FULL PAGE'.$_SERVER['REQUEST_URI'];
   if (!BLUNT_CACHE_FULL_PAGE || !apply_filters('blunt_cache_frag_check', false, $key)) {
-    /* The code of the template will be found here
-     * The above if statement can be confusing to grasp which is why I'm explaining it
-     * In the above if statement, do to the way if statements work in PHP if 
-     * BLUNT_CACHE_FULL_PAGE is false then this block will always be executed. this is
-     * due to short-circuit evaluation. Since the first part of the || is true then
-     * there is no need to perform the second part of the statement. Since the second
-     * part of the || is not evaluated caching is never turned on.
-     * Caching will of the full page will only happen if the first part of the 
-     * statement evaluates to false which means BLUNT_CACHE_FULL_PAGE === true
-     */
+      /* The code of the template will be found here.
+       * In the above if statement, do to the way if statements work in PHP if 
+       * BLUNT_CACHE_FULL_PAGE is false then this block will always be executed. this is
+       * due to short-circuit evaluation. Since the first part of the || is true then
+       * there is no need to perform the second part of the statement. Since the second
+       * part of the || is not evaluated caching is never is never started. Caching of 
+		   * the full page will only happen if the first part of the statement evaluates 
+			 * to false which means BLUNT_CACHE_FULL_PAGE === true. It's a bit of backwards 
+			 * logic, but the only way it will work using a single if statement.
+       */
   }
   if (BLUNT_CACHE_FULL_PAGE) {
+    // here, we only do the final step if full page caching in turned on.
     do_action('blunt_cache_frag_output_save', $key);
   }
 ```

@@ -2,9 +2,28 @@
 	
 	/* Theme Setup Functions */
 	
-	// for my plugin Blunt Cache
-	// turn full page caching on/off
-	define('BLUNT_CACHE_FULL_PAGE', true);
+	// function that sets up full page caching
+	// using Blunt Cache
+	// for this theme
+	function blunt_cache_full_page_setup() {
+		$full_page_cache = true; // set to false if you want to completely disable full page caching
+		// turn full page caching of for specific templates
+		// add the templates you want to turn off caching for 
+		// to the array $do_not_cache_templates
+		// do not include path or extension
+		// example $do_not_cache_templates = array('page', 'tag', 'single');
+		// for this to work you must set the value of $full_page_cache above to true
+		$do_not_cache_templates = array();
+		if ($full_page_cache) {
+			global $template;
+			$file = basename(strtolower($template), '.php'); // strtolower just a precaution
+			if (in_array($file, $do_not_cache_templates)) {
+				$full_page_cache = false;
+			}
+		} // end if full_page_cache
+		define('BLUNT_CACHE_FULL_PAGE', $full_page_cache);
+	} // end function blunt_cache_full_page_setup
+	add_action('template_redirect', 'blunt_cache_full_page_setup');
 	
 	// when this is set to false, certain main items are hidden
 	// see function blunt_remove_menus()
