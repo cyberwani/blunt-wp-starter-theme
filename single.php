@@ -1,6 +1,6 @@
 <?php
 	/*
-			The template for showing single Blog post
+		The template for showing single Blog post
 	*/
 	
 	$key = 'FULL PAGE'.$_SERVER['REQUEST_URI'];

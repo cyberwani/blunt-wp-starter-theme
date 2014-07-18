@@ -1,6 +1,6 @@
 <?php 
 	/*
-			The template for displaying Blog Date Archive pages
+		The template for displaying Blog Date Archive pages
 	*/
 	
 	$key = 'FULL PAGE'.$_SERVER['REQUEST_URI'];

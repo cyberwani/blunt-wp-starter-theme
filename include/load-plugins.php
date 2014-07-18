@@ -1,14 +1,13 @@
 <?php 
 	
 	/*
-			Any plugins that you place into the includes/plugins 
-			folder will be autoloaded by this file
-			
-			Note that plugins loaded here must be safe for loading from the theme
-			no checking is done, if a file with a plugin header is found it is loaded
-			
-			be vewwwy vewwwy carful
-			
+		Any plugins that you place into the includes/plugins 
+		folder will be autoloaded by this file
+		
+		Note that plugins loaded here must be safe for loading from the theme
+		no checking is done, if a file with a plugin header is found it is loaded
+		
+		be vewwwy vewwwy carful
 	*/
 	
 	$blunt_plugin_path = dirname(__FILE__).'/plugins';

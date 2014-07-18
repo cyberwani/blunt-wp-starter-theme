@@ -1,9 +1,10 @@
 <?php 
 	
-	/* pre_get_posts is used to alter the main query before it is run
-		 so that you only get the post you want to get rather than
-		 doing a new query later and slowing down the site
-		 I put in here in a separate file so it's easy for me to find
+	/* 
+		pre_get_posts is used to alter the main query before it is run
+		so that you only get the post you want to get rather than
+		doing a new query later and slowing down the site
+		I put in here in a separate file so it's easy for me to find
 	*/
 	
 	function blunt_pre_get_posts($query=false) {

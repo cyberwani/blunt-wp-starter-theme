@@ -1,8 +1,8 @@
 <?php
 	/*
-			The template for displaying all pages using default template
-			can include different template for front or inner page
-			see page-front.php and page-inner.php
+		The template for displaying all pages using default template
+		can include different template for front or inner page
+		see page-front.php and page-inner.php
 	*/
 	
 	$key = 'FULL PAGE'.$_SERVER['REQUEST_URI'];

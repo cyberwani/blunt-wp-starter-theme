@@ -1,9 +1,9 @@
 <?php
 	/*
-			The template for showing a custom taxonomy archive
-			copy this file and replace "CUSTOM-TAXONOMY" with your custom taxonomy slug
-			
-			This template also includes the basic schema.org markup for "Product"
+		The template for showing a custom taxonomy archive
+		copy this file and replace "CUSTOM-TAXONOMY" with your custom taxonomy slug
+		
+		This template also includes the basic schema.org markup for "Product"
 	*/
 	
 	$key = 'FULL PAGE'.$_SERVER['REQUEST_URI'];

@@ -24,7 +24,6 @@
 	}
 	add_filter('blunt_cache_ttl', 'set_blunt_cache_ttl');
 	
-	
 	// set jpeg image resize quality, the default WP quality is 90
 	function blunt_jpeg_quality($arg) {
 		return 80;
@@ -188,7 +187,7 @@
 	
 	// WP rsform loads my standandard form script that I'm currently using
 	// it's not a plugin, checks for existance before loading
-	// exprects to find script in the root of the site
+	// expects to find script folder in the root of the site
 	function WPrsform() {
 		if (is_dir(ABSPATH.'/rsform') && file_exists(ABSPATH.'/rsform/rsformWP.php')) {
 			require(ABSPATH.'/rsform/rsformWP.php');

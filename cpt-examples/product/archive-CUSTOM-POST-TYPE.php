@@ -1,9 +1,9 @@
 <?php
 	/*
-			The template for showing a custom post type archive
-			copy this file and replace "CUSTOM-POST-TYPE" with your custom post type slug
-			
-			This template also includes the basic schema.org markup for "Product"
+		The template for showing a custom post type archive
+		copy this file and replace "CUSTOM-POST-TYPE" with your custom post type slug
+		
+		This template also includes the basic schema.org markup for "Product"
 	*/
 	
 	$key = 'FULL PAGE'.$_SERVER['REQUEST_URI'];

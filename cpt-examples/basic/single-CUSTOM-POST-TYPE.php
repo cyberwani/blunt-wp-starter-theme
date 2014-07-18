@@ -1,7 +1,7 @@
 <?php
 	/*
-			The template for showing a single post from a custom post type
-			copy this file and replace "CUSTOM-POST-TYPE" with your custom post type slug
+		The template for showing a single post from a custom post type
+		copy this file and replace "CUSTOM-POST-TYPE" with your custom post type slug
 	*/
 	
 	$key = 'FULL PAGE'.$_SERVER['REQUEST_URI'];

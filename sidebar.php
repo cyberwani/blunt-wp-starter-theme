@@ -1,6 +1,6 @@
 <?php
 	/*
-			The sidebar Used on Blog Pages
+		The sidebar Used on Blog Pages
 	*/
 ?>
 <div class="widget-area">

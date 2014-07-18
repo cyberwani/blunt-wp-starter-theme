@@ -9,7 +9,8 @@
 		create a plugin to do it so they remain even if the theme changes
 		but it's easier to add them in functions.php when your in a hurry
 		at least if you put them all in one file you can find them when you decide
-		to move them to a plugin or the next developer can see what you added
+		to move them to that plugin you should have created or the next developer 
+		can see what you added
 		
 		you'll notice that I like to add my columns after the title 
 		and sometimes remove the post date, these are just examples so modify as needed
@@ -100,7 +101,7 @@
 	// the next 2 functions can be used to add columns 
 	// and column content to a custom post admin page
 	// the example functions given add several custom field columns, inlcuding an image
-	// replace {CUSTOM-POST-TYPE-SLUG} with your custom post type slug
+	// replace {CUSTOM-POST-TYPE} with your custom post type slug
 	// replace CUSTOM_POST_TYPE in the function name with your custom post type
 	// add columns to a custom post type
 	function blunt_CUSTOM_POST_TYPE_columns($columns) {
@@ -152,6 +153,6 @@
 				break;
 		}
 	} // end blunt_CUSTOM_POST_TYPE_columns_content
-	//add_action('manage_action-button_posts_custom_column', 'blunt_CUSTOM_POST_TYPE_columns_content', 10, 2 );
+	//add_action('manage_{CUSTOM-POST-TYPE}_posts_custom_column', 'blunt_CUSTOM_POST_TYPE_columns_content', 10, 2 );
 	
 ?>

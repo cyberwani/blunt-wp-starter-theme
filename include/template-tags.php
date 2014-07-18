@@ -4,9 +4,9 @@
 	
 	function blunt_abs_url($url) {
 		/*
-				I use a plugin called Root Relative URLs
-				The problem is that sometimes urls should be absolute
-				This function will convert urls back to absolute when needed
+			I use a plugin called Root Relative URLs
+			The problem is that sometimes urls should be absolute
+			This function will convert urls back to absolute when needed
 		*/
 		$new_url = $url;
 		if (!preg_match('#^https?://#', $url)) {
@@ -76,11 +76,11 @@
 		// standard archve nav newer/older posts
 		// can be used to put previous next links on archive pages
 		/*
-				$args = array('prev_text' => 'Newer Posts',
-											'next_text' => 'Older Posts',
-											'prev_char' => '&laquo',
-											'next_char' => '&raquo;')
-				$location = 'class name or class names to add to nav menu'
+			$args = array('prev_text' => 'Newer Posts',
+										'next_text' => 'Older Posts',
+										'prev_char' => '&laquo',
+										'next_char' => '&raquo;')
+			$location = 'class name or class names to add to nav menu'
 		*/
 		global $wp_query;
 		$prev_text = 'Newer Posts';

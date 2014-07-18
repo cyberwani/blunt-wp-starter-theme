@@ -1,6 +1,6 @@
 <?php
 	/*
-			The Header template for our theme
+		The Header template for our theme
 	*/
 ?><!DOCTYPE html>
 	<!--[if IE 7]>

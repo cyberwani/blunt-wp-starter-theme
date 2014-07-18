@@ -1,6 +1,6 @@
 <?php
 	/*
-			The template for displaying Category Archive pages
+		The template for displaying Category Archive pages
 	*/
 	
 	$key = 'FULL PAGE'.$_SERVER['REQUEST_URI'];

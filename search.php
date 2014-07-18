@@ -1,6 +1,6 @@
 <?php
 	/*
-			The template for displaying Search Results pages
+		The template for displaying Search Results pages
 	*/
 	
 	$key = 'FULL PAGE'.$_SERVER['REQUEST_URI'];

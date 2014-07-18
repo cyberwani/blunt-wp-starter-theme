@@ -1,6 +1,6 @@
 <?php
 	/*
-			The template for Post Tage archive Page
+		The template for Post Tage archive Page
 	*/
 	
 	$key = 'FULL PAGE'.$_SERVER['REQUEST_URI'];
