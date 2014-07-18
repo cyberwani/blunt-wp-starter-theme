@@ -1,6 +1,8 @@
 Blunt WP Starter Theme
 ======================
 
+This is not quite ready yet, there are still a few changes that need to be made.
+
 © 2014 John A. Huebner II
 GNU General Public License | https://www.gnu.org/licenses/gpl.html
 
