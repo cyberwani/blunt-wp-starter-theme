@@ -78,4 +78,8 @@ but it can also be used as a full page cache on pages that won't break when cach
 If you use another cache, the code I've included in the template files can simply
 be ignored, or if you really want to you can remove it.
 
-Full Page Caching
+*Full Page Caching*
+I have created a form of full page caching and implemented it in this theme. If you
+are using my caching plugin you can remove it by changing the value in this define
+statement that you'll find in /include/theme-setup.php to false.
+```define('BLUNT_CACHE_FULL_PAGE', true)```
