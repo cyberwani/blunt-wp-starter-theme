@@ -48,10 +48,12 @@ yet, no categories at all and "Posts" that are nothing but testimonials or
 products because the developer that built it did not have enough forethought to
 realize that the client might some day want to create "Blog Posts".
 
-Custom post types and taxonomies solve the sorting mess that is created when
-one tries to store all content types together. If you're creating more than
-a simple brochure site that will have simple pages and a blog and you're not
-using custom post types and taxonomies then ***YOU ARE DOING IT WRONG!***
+Custom post types and taxonomies solve the sorting mess, code bloat and excessive
+db queries that are created when one tries to store all content types together in
+a single post type. If you're creating more than a simple brochure site that will 
+have simple pages and a blog and you're not using custom post types and taxonomies 
+then ***YOU ARE DOING IT WRONG!*** It's time you learned how to use custom
+post types and taxonomies or it's time for you to stop building WP sites.
 
 
 Schema.Org Markup
