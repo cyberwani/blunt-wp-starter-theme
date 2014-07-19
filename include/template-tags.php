@@ -100,7 +100,7 @@
 			global $cpage;
 			?>
 				<ul class="blunt-comment-nav <?php echo $location; ?>">
-       		<?php 
+			 		<?php 
 						if ($cpage > 1) {
 							?>
 								<li class="newer">
@@ -116,8 +116,8 @@
 							<?php 
 						}
 					?>
-        </ul>
-      <?php
+				</ul>
+			<?php
 		}
 	} // end function blunt_comment_nav
 	
