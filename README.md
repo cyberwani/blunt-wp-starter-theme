@@ -36,6 +36,23 @@ Read through the files, if you like what you see then use it or branche it, if
 you don't like it I'm sure there's a starter theme out there that is trying to 
 be everything to every developer that will suit your needs.
 
+Custom Post Types & Taxonomies
+------------------------------
+
+This theme stresses the use of custom post types and taxonomies. Why? It is the
+opinion of the author (me) that the only thing that should be put into "Posts"
+is blog posts and the only thing that should be put into "Pages" are content
+pages. I should not open up "Posts" and see a category named "Testimonials" for
+holding testimonials or a category name "Products" for holding products. Or, worse
+yet, no categories at all and "Posts" that are nothing but testimonials or
+products because the developer that built it did not have enough forethought to
+realize that the client might some day want to create "Blog Posts".
+
+Custom post types and taxonomies solve the sorting mess that is created when
+one tries to store all content types together. If you're creating more than
+a simple brochure site that will have simple pages and a blog and your not
+using custom post types and taxonomies then ***YOU ARE DOING IT WRONG***.
+
 
 Schema.Org Markup
 -----------------
