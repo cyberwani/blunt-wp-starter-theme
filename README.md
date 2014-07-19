@@ -66,14 +66,15 @@ either need to do 1 of 3 things that are all bad practices:
 * Let the plugin format your content
 * Duplicate the content, once in natural form and once in a block created by the plugin
 * Use hidden markup <meta> tags in the content
+
 The problem is that no generic theme that tries to be all things to all people is 
 going to manage this properly without making the backend so complicated to use 
 that it becomes frustrating. To embrace schema.org in WP the developer needs to 
 embrace the idea of custom post types and taxonomies so that separate templates 
 can be used for each type of schema.org type to be delt with. The developer also 
-needs to embrase the use of custom fields so that individual data can be marked up. 
+needs to embrace the use of custom fields so that individual data can be marked up. 
 Yeah, you can get the basic data in there with a generic theme, but the more
-advanced item properties...
+advanced item properties, good luck with that.
 
 The basic theme templates contain the correct schema.org markup for blogs. In 
 the folder cpt-examples you will also find some other templates with markup for
