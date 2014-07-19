@@ -13,7 +13,10 @@
 		// do not include path or extension
 		// example $do_not_cache_templates = array('page', 'tag', 'single');
 		// for this to work you must set the value of $full_page_cache above to true
-		$do_not_cache_templates = array();
+		// in this example I am turning off full page caching for single.php
+		// because single blog posts have comments and 
+		// I do not want the comments secion to be cached
+		$do_not_cache_templates = array('single');
 		if ($full_page_cache) {
 			global $template;
 			$file = basename(strtolower($template), '.php'); // strtolower just a precaution
