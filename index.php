@@ -2,8 +2,7 @@
 	/*
 		The main template file
 		
-		*** A NOTE TO WOULD-BE THEME DEVELOPERS **
-		
+		*** A NOTE TO WOULD-BE THEME DEVELOPERS ***
 		it is a common practice for theme developers to use this file for the home 
 		page of a site. In my opinion, this is a bad and incorrect practice. This 
 		file is used for displaying the main "Blog" page. 
@@ -15,7 +14,10 @@
 		either use this template system or it should use a custom template that 
 		can be selected in the admin, again, in my opinion. This will prevent 
 		confusion and work for the next developer that needs to pick up what you 
-		left behind.
+		left behind. Just because you're creating a brochure site that does not
+		have a blog today does not mean the client won't want to use the blog
+		next week or next year and I'm sure when they do they're probabl hoping
+		that their site does not need serious reworking to do so.
 	*/
 	
 	$key = 'FULL PAGE'.$_SERVER['REQUEST_URI'];
