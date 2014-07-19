@@ -50,8 +50,8 @@ realize that the client might some day want to create "Blog Posts".
 
 Custom post types and taxonomies solve the sorting mess that is created when
 one tries to store all content types together. If you're creating more than
-a simple brochure site that will have simple pages and a blog and your not
-using custom post types and taxonomies then ***YOU ARE DOING IT WRONG***.
+a simple brochure site that will have simple pages and a blog and you're not
+using custom post types and taxonomies then ***YOU ARE DOING IT WRONG!***
 
 
 Schema.Org Markup
