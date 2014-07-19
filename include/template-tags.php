@@ -72,6 +72,12 @@
 	} // end function blunt_strip_excerpt_html
 	add_filter('the_excerpt', 'blunt_strip_excerpt_html', 99);
 	
+	function blunt_comment_schema($comment) {
+		// see http://codex.wordpress.org/Function_Reference/wp_list_comments for example
+		// a custom function for displaying comments that includes schema.org markup
+		
+	} // end function blunt_comment_schema
+	
 	function blunt_comment_nav($location='', $args=false) {
 		// standard nave for newer/older comments
 		// used on comment template
