@@ -72,9 +72,13 @@
 	} // end function blunt_strip_excerpt_html
 	add_filter('the_excerpt', 'blunt_strip_excerpt_html', 99);
 	
-	function blunt_comment_schema($comment) {
+	function blunt_comment_schema($comment, $args, $depth) {
 		// see http://codex.wordpress.org/Function_Reference/wp_list_comments for example
 		// a custom function for displaying comments that includes schema.org markup
+		// ***********************************************************************************
+		// ***********************************************************************************
+		// ***********************************************************************************
+		// ***********************************************************************************
 		
 	} // end function blunt_comment_schema
 	
