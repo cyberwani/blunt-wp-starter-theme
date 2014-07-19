@@ -55,6 +55,10 @@ have simple pages and a blog and you're not using custom post types and taxonomi
 then ***YOU ARE DOING IT WRONG!*** It's time you learned how to use custom
 post types and taxonomies or it's time for you to stop building WP sites.
 
+Check out [Custom Post Type UI](http://wordpress.org/plugins/custom-post-type-ui/).
+Its a plugin that makes the process of creating custom post types and taxonomies
+simple.
+
 
 Schema.Org Markup
 -----------------
