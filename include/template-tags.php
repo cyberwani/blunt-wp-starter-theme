@@ -72,6 +72,49 @@
 	} // end function blunt_strip_excerpt_html
 	add_filter('the_excerpt', 'blunt_strip_excerpt_html', 99);
 	
+	function blunt_comment_nav($location='', $args=false) {
+		// standard nave for newer/older comments
+		// used on comment template
+		/*
+			$args = array('prev_text' => 'Newer Posts',
+										'next_text' => 'Older Posts',
+										'prev_char' => '&laquo',
+										'next_char' => '&raquo;')
+			$location = 'class name or class names to add to nav menu'
+		*/
+		$prev_text = 'Newer Comments';
+		$next_text = 'Older Comments';
+		$prev_char = '&laquo;';
+		$next_char = '&raquo;';
+		if (is_array($args)) {
+			extract($args, EXTR_IF_EXISTS);
+		}
+		$comment_page_count = get_comment_pages_count();
+		if ($comment_page_count > 1 && get_option('page_comments')) {
+			global $cpage;
+			?>
+				<ul class="blunt-comment-nav <?php echo $location; ?>">
+       		<?php 
+						if ($cpage > 1) {
+							?>
+								<li class="newer">
+									<?php previous_posts_link($prev_char.' '.__($prev_text)); ?>
+								</li>
+							<?php 
+						}
+						if ($cpage < $comment_page_count) {
+							?>
+								<li class="older">
+									<?php next_posts_link(__($next_text).' '.$next_char); ?>
+								</li>
+							<?php 
+						}
+					?>
+        </ul>
+      <?php
+		}
+	} // end function blunt_comment_nav
+	
 	function blunt_archive_nav($location='', $args=false) {
 		// standard archve nav newer/older posts
 		// can be used to put previous next links on archive pages
@@ -92,19 +135,19 @@
 		}
 		if ($wp_query->max_num_pages > 1) {
 			?>
-				<ul class="ssi-archive-nav <?php echo $location; ?>">
+				<ul class="blunt-archive-nav <?php echo $location; ?>">
 					<?php 
 						if ($wp_query->paged > 1) {
 							?>
 								<li class="newer">
-									<?php previous_posts_link($prev_char.' '.$prev_text); ?>
+									<?php previous_posts_link($prev_char.' '.__($prev_text)); ?>
 								</li>
 							<?php 
 						}
 						if ($wp_query->paged < $wp_query->max_num_pages) {
 							?>
 								<li class="older">
-									<?php next_posts_link($next_text.' '.$next_char); ?>
+									<?php next_posts_link(__($next_text).' '.$next_char); ?>
 								</li>
 							<?php 
 						}
@@ -122,14 +165,14 @@
 		$prev_char = '&raquo;';
 		// see blunt_archive_nav for args
 		ob_start();
-		next_post_link('%link', $next_char.' '.$next_post);
+		next_post_link('%link', $next_char.' '.__($next_post));
 		$next_link = ob_get_clean();
 		ob_start();
-		previous_post_link('%link', $prev_post.' '.$prev_char);
+		previous_post_link('%link', __($prev_post).' '.$prev_char);
 		$prev_link = ob_get_clean();
 		if ($next_link || $prev_link) {
 			?>
-				<ul class="bnwp-post-nav <?php echo $location; ?>">
+				<ul class="blunt-post-nav <?php echo $location; ?>">
 					<?php 
 						if ($next_link) {
 							?>
