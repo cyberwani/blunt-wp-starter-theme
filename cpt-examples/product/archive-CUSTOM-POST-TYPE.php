@@ -14,7 +14,7 @@
 				[Sidebar Before Content]
 			</div>
 			<div id="content">
-				<h1 id="page-header-h1">Products</h1>
+				<h1 id="page-header-h1"><?php echo __('Products'); ?></h1>
 				<?php 
 					if (have_posts()) {
 						$args = array('prev_text' => 'Previous Products',
