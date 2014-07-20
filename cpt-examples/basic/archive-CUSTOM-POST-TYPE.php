@@ -12,7 +12,7 @@
 				[Sidebar Before Content]
 			</div>
 			<div id="content">
-				<h1 id="page-title">CUSTOM POST TYPE ARCHIVE PAGE HEADING</h1>
+				<h1 id="page-title"><?php echo __('CUSTOM POST TYPE ARCHIVE PAGE HEADING'); ?></h1>
 				<?php 
 					if (have_posts()) {
 						blunt_archive_nav('before');
