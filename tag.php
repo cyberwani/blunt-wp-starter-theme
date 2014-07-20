@@ -8,7 +8,7 @@
 		get_header();
 		?>
 			<div id="content" itemscope itemtype="http://schema.org/Blog">
-				<h1 id="page-title">Tagged: <?php single_tag_title(); ?></h1>
+				<h1 id="page-title"><?php echo __('Tagged'),': ',single_tag_title(); ?></h1>
 				<?php 
 					if (have_posts()) {
 						blunt_archive_nav('before');
