@@ -11,7 +11,7 @@
 		return;
 	}
 ?>
-<div id="comments" class="comments-area" itemscope itemtype="http://schema.org/UserComments">
+<div id="comments" class="comments-area">
 	<?php 
 		if (have_comments()) { 
 			?>

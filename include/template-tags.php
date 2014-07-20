@@ -83,17 +83,20 @@
 		}
 		?>
     	<li id="comment-<?php comment_id(); ?>" <?php comment_class($class); ?>>
-      	<div id="div-comment-<?php comment_id(); ?>" class="comment-body">
+      	<div id="div-comment-<?php 
+						comment_id(); ?>" class="comment-body" itemscope itemtype="http://schema.org/UserComments">
         	<div class="comment-author vcard">
           	<?php 
 							if ($args['avatar_size']) {
 								echo get_avatar($comment, $args['avatar_size']);
 							}
-							printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'),
+							printf(__('<cite class="fn" itemprop="creator">%s</cite> <span class="says">says:</span>'),
 												get_comment_author_link());
 							if (!$comment->comment_approved) {
 								?>
-                	<em><?php _e('Your comment is awaiting moderation.'); ?></em>
+                	<em class="comment-awaiting-moderation">
+										<?php _e('Your comment is awaiting moderation.'); ?>
+                  </em>
 									<br />
                 <?php 
 							}
@@ -104,12 +107,9 @@
 									printf(__('%1$s at %2$s'), get_comment_date(), get_comment_time()); ?></a>
 							<?php edit_comment_link(__('(Edit)'), '&nbsp;&nbsp;', ''); ?>
 						</div>
-            <?php 
-           		comment_text(get_comment_id(),
-													 array_merge($args, array('add_below' => $add_below,
-																										'depth' => $depth,
-																										'max_depth' => $args['max_depth'])));
-            ?>
+            <span itemprop="commentText">
+							<?php comment_text(); ?>
+            </span>
             <div class="reply">
             	<?php 
 								comment_reply_link(array_merge($args, array('add_below' => $add_below,
@@ -120,7 +120,7 @@
           </div>
         </div>
 		<?php 
-		// to meed the needs of wp since recursive functions 
+		// to meet the needs of wp since recursive functions 
 		// don't seem to be on the menu
 		// the closing li tag is in blunt_comment_schema_end()
 	} // end function blunt_comment_schema
