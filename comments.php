@@ -25,11 +25,14 @@
 				</h2>
 			<?php blunt_comment_nav('before'); ?>
 			<ul class="comment-list">
-				<?php
-					wp_list_comments(array('style' => 'ol',
-																 'short_ping' => true,
-																 'avatar_size'=> 34,
-																 'callback' => 'blunt_comment_schema'));
+				<?php 
+					// please note that the callback here
+					// will only work with style ul or ol]
+					// if you wish to use div then you'll need to rewrite the callback
+					wp_list_comments(array('style' => 'ul',
+																 'avatar_size'=> 0,
+																 'callback' => 'blunt_comment_schema',
+																 'end-callback' => 'blunt_comment_schema_end'));
 				?>
 			</ul>
 			<?php 
