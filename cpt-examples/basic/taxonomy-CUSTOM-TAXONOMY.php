@@ -32,7 +32,7 @@
 								?>
 							</div>
 						<?php 
-						blunt_archive_nav('before');
+						blunt_archive_nav('after');
 					} else {
 						// no posts
 						?>
