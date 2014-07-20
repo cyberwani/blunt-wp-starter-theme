@@ -1,8 +1,6 @@
 Blunt WP Starter Theme
 ======================
 
-This is not quite ready yet, there are still a few changes that need to be made, but it's close. I still need to add additional chaching of fragments and objects as well as more templates for custom post types and taxonomies using different schema.org markup.
-
 © 2014 John A. Huebner II
 GNU General Public License | https://www.gnu.org/licenses/gpl.html
 
@@ -25,16 +23,17 @@ trying to hurd cats; by the time you think you have one figured out it changes
 direction and most of the rest have disappeared.
 
 It does have some things that I consider required that you won't see elsewhere 
-though. Functions I frequently use; schema.org markup; well laid out areas and 
-files so I can easily find/add/modify what needs changing.
+though: functions I frequently use, schema.org markup; built in support for my
+fragment and object cache, well laid out areas and files so I can easily 
+find/add/modify what needs changing, and clean, easy to read coding.
 
 Guiding principle [YAGNI](http://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), 
 I've stripped out the 95% that I'm never gonna use and kept or added only those 
 things that I know I'm gonna need and use most of the time.
 
 Read through the files, if you like what you see then use it or fork it, if 
-you don't like it I'm sure there's a starter theme out there that is trying to 
-be everything to every developer that will suit your needs.
+you don't like it then I'm sure there's a starter theme out there that is trying 
+to be everything to every developer that will suit your needs.
 
 Please note that this theme is not meant to have child themes. The idea here is
 that you're going to use this as a base for starting your own custom theme,
@@ -52,17 +51,20 @@ yet, no categories at all and "Posts" that are nothing but testimonials or
 products because the developer that built it did not have enough forethought to
 realize that the client might some day want to create "Blog Posts".
 
-Custom post types and taxonomies solve the sorting mess, code bloat and excessive
-db queries that are created when one tries to store all content types together in
-a single post type. If you're creating more than a simple brochure site that will 
-have simple pages and a blog and you're not using custom post types and taxonomies 
-then ***YOU ARE DOING IT WRONG!*** It's time you learned how to use custom
-post types and taxonomies or it's time for you to stop building WP themes.
+Custom post types and taxonomies solve the sorting mess, code bloat, excessive db 
+queries and complicate template files that are created when one tries to store all 
+content types together in a single post type. If you're creating more than a simple 
+brochure site that will have simple pages and a blog and you're not using custom 
+post types and taxonomies then ***YOU ARE DOING IT WRONG!*** It's time you learned 
+how to use custom post types and taxonomies or it's time for you to stop building 
+WP themes.
 
 Check out [Custom Post Type UI](http://wordpress.org/plugins/custom-post-type-ui/).
 Its a plugin that makes the process of creating custom post types and taxonomies
 simple. If you look through my custom post type example files you'll see that 
-creating templates for them is really rather stupidly easy.
+creating templates for them is really rather stupidly easy, if you can understand 
+a basic post (single.php) or archive (index.php) template then you can build 
+templates for custom post types and taxonomies.
 
 
 Schema.Org Markup
@@ -80,15 +82,15 @@ need to do 1 of 3 things that are all bad practices:
 
 The problem is that no generic theme that tries to be all things to all people is 
 going to manage this properly without making the backend so complicated to use 
-that it becomes frustrating. To embrace schema.org markup in WP the developer needs to 
-embrace the idea of custom post types and taxonomies so that separate templates 
-can be used for each schema.org type to be delt with. The developer also needs to 
-embrace the use of custom fields so that individual data can be marked up. 
-Yeah, you can get the basic data in there with a generic theme, but the more
-advanced item properties, good luck with that. Take a look at the plugin 
-[ACF](http://wordpress.org/plugins/advanced-custom-fields/) for the best way to
-add custom fields to your post types, or terms, or users, or whatever the 4311 
-you want to add them to.
+that it becomes frustrating to the average user. To embrace schema.org markup 
+in WP the developer needs to embrace the idea of custom post types and taxonomies 
+so that separate templates can be used for each schema.org type to be delt with. 
+The developer also needs to embrace the use of custom fields so that individual 
+data can be marked up. Yeah, you can get the basic data in there with a generic 
+theme, but the more advanced item properties, good luck with that. Take a look 
+at the plugin [ACF](http://wordpress.org/plugins/advanced-custom-fields/) for 
+the best way to add custom fields to your post types, or terms, or users, or 
+whatever the 4311 you want to add them to.
 
 The basic theme templates contain the correct schema.org markup for blogs. In 
 the folder cpt-examples you will also find some other templates with markup for
@@ -100,21 +102,21 @@ Caching
 In most cases I am unable to use a full page cache in the sites I build. The 
 reasons for this are complex but there is usally data that cannot be cached on 
 almost every page of a site. This can be as simple as a short contact form that
-appears on 99% of the site's pages. The hidden data in the form that prevents
+appears on 99% of the site's pages; the hidden data in the form that prevents
 spam must be refreshed on every page load and it is different on every page load.
 Combine that with a full page cache and all the forms break.
 
 This theme incorporates my own caching plugin Blunt Cache, you can find it in the
-[WordPress Repository](http://wordpress.org/plugins/blunt-cache/) or [here on GitHub](https://github.com/Hube2/blunt-cache). I needed both a fragment cache and an 
-object cache and I needed them to be stupidly easy and quick to implement. It is a 
-fragment and object cache, but it can also be used as a full page cache on pages 
-that won't break when cached. If you use another cache, the code I've included in 
-the template files can simply be ignored, or if you really want to you can remove it.
+[WordPress Repository](http://wordpress.org/plugins/blunt-cache/) or [here on GitHub](https://github.com/Hube2/blunt-cache). I needed both a fragment cache and 
+an object cache and I needed them to be stupidly easy and quick to implement. It 
+can also be used as a full page cache on pages that won't break when cached. If 
+you use another cache the code I've included in the template files can simply be 
+ignored, or if you really want to you can remove it.
 
 *Full Page Caching*
-I have created a form of full page caching and implemented it in this theme. If you
-are using my caching plugin you can remove it by altering the function
-blunt_cache_full_page_setup() in the file /includ/theme-setup.php.
+I have created a form of full page caching and implemented it in this theme. If 
+you are using my caching plugin you can remove it by altering the function
+blunt_cache_full_page_setup() in the file /include/theme-setup.php.
 
 You will find code like the following in the main template files. I thought it should
 be explained because the logic might confuse some people. It is an alteration of the code
@@ -141,6 +143,8 @@ you will find in the documentation for the fragment cache in Blunt Cache.
 ```
 
 I have only implemented one example of fragment caching outside of full page in the base
-theme. This example can be seen in single.php. three areas of the page are being cached
+theme. This example can be seen in single.php. Three areas of the page are being cached
 and the comments section of the page is left uncached so that it can remain dynamic and
-show new comments without needing to clear any part of the cache.
+show new comments without needing to clear any part of the cache. In most cases I would 
+alter the caching on a template dependent on what going to be mostly static and what 
+will likely need to be refreshed on each page load.
