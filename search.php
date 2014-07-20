@@ -8,11 +8,11 @@
 		get_header();
 		?>
 			<div id="content">
-				<h1 id="page-title">Search Results for: <?php echo get_search_query(); ?></h1>
+				<h1 id="page-title"><?php echo __('Search Results for'),': ',get_search_query(); ?></h1>
 				<?php 
 					if (have_posts()) {
-						$args = array('prev_text' => 'Previous Results',
-													'next_text' => 'More Results');
+						$args = array('prev_text' => __('Previous Results'),
+													'next_text' => __('More Results'));
 						blunt_archive_nav('before', $args);
 						while (have_posts()) {
 							the_post();
