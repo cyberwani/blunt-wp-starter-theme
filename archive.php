@@ -10,12 +10,12 @@
 			<div id="content" itemscope itemtype="http://schema.org/Blog">
 				<h1 id="page-title"><?php 
 						if (is_day()) {
-							echo 'Daily Archives: <span itemprop="datePublished">'.get_the_date().'</span>';
+							echo __('Daily Archives:'),' <span itemprop="datePublished">'.get_the_date().'</span>';
 						} elseif (is_month()) {
-							echo 'Monthly Archives: <span itemprop="datePublished">'.
+							echo __('Monthly Archives:'),' <span itemprop="datePublished">'.
 										get_the_date('F Y', 'monthly archives date format').'</span>';
 						} elseif (is_year()) {
-							echo 'Yearly Archives: <span itemprop="datePublished">'.
+							echo __('Yearly Archives:'),' <span itemprop="datePublished">'.
 										get_the_date('Y', 'yearly archives date format').'</span>';;
 						} else {
 							echo 'Archives: ';
