@@ -2,20 +2,17 @@
 	
 	/* Theme Setup Functions */
 	
-	// function that sets up full page caching
-	// using Blunt Cache
-	// for this theme
+	// function that sets up full page caching using Blunt Cache for this theme
 	function blunt_cache_full_page_setup() {
 		$full_page_cache = true; // set to false if you want to completely disable full page caching
-		// turn full page caching of for specific templates
-		// add the templates you want to turn off caching for 
-		// to the array $do_not_cache_templates
-		// do not include path or extension
+		// turn full page caching off for specific templates add the templates you 
+		// want to turn off caching for to the array $do_not_cache_templates
+		// **do not include path or extension**
 		// example $do_not_cache_templates = array('page', 'tag', 'single');
 		// for this to work you must set the value of $full_page_cache above to true
+		// setting $full_page_cache to false will disable full page caching site wide
 		// in this example I am turning off full page caching for single.php
-		// because single blog posts have comments and 
-		// I do not want the comments secion to be cached
+		// because single blog posts have comments and I do not want the comments secion to be cached
 		$do_not_cache_templates = array('single');
 		if ($full_page_cache) {
 			global $template;
@@ -48,7 +45,7 @@
 	
 	// set jpeg image resize quality, the default WP quality is 90
 	function blunt_jpeg_quality($arg) {
-		return 80;
+		return 70;
 	}
 	add_filter('jpeg_quality', 'blunt_jpeg_quality');
 	
@@ -79,7 +76,7 @@
 		// register your widget areeas here
 		register_sidebar(array('name' => 'Blog Sidebar',
 													 'id' => 'blog-sidebar',
-													 'description' => 'Appears on Blog Section Pages',
+													 'description' => 'Stadard sidebar for your Blog',
 													 'before_widget' => '<div id="%1$s" class="widget %2$s">',
 													 'after_widget' => '</div>',
 													 'before_title' => '<h3 class="widget-title">',
