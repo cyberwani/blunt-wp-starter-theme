@@ -8,7 +8,7 @@
 		get_header();
 		?>
 			<div id="content" itemscope itemtype="http://schema.org/Person">
-				<h1 id="page-title">Author: <?php echo get_the_author(); ?></h1>
+				<h1 id="page-title"><?php echo __('Author:'),' ',get_the_author(); ?></h1>
 				<div class="author-info">
 					<div class="author-avatar" itemprop="image">
 						<?php echo get_avatar(get_the_author_meta('user_email'), 96, NULL, get_the_author()); ?>
