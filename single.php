@@ -21,9 +21,9 @@
 							if (!apply_filters('blunt_cache_frag_check', false, $content_key)) {
 								blunt_post_nav('before');
 								?>
-                	<h1 id="page-title" class="single-item-title" itemprop="name"><?php the_title(); ?></h1>
+									<h1 id="page-title" class="single-item-title" itemprop="name"><?php the_title(); ?></h1>
 									<div itemprop="text"><?php the_content(); ?></div>
-                <?php
+								<?php
 								blunt_post_meta();
 								blunt_post_nav('after');
 							} // end cache check
@@ -38,10 +38,10 @@
 		$foot_key = 'FOOTER'.$_SERVER['REQUEST_URI'];
 		if (!apply_filters('blunt_cache_frag_check', false, $foot_key)) {
 			?>
-        <div id="sidebar-after-content">
-          <?php get_sidebar('blog'); ?>
-        </div>
-      <?php 
+				<div id="sidebar-after-content">
+					<?php get_sidebar('blog'); ?>
+				</div>
+			<?php 
 			get_footer();
 		} // end cache check
 		do_action('blunt_cache_frag_output_save', $foot_key);
