@@ -139,3 +139,8 @@ you will find in the documentation for the fragment cache in Blunt Cache.
     do_action('blunt_cache_frag_output_save', $key);
   }
 ```
+
+I have only implemented one example of fragment caching outside of full page in the base
+theme. This example can be seen in single.php. three areas of the page are being cached
+and the comments section of the page is left uncached so that it can remain dynamic and
+show new comments without needing to clear any part of the cache.
