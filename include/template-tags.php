@@ -30,7 +30,8 @@
 	function blunt_post_meta($show_author=true) {
 		$categories_list = get_the_category_list(', ');
 		$tag_list = get_the_tag_list('', ', ', '');
-		$date = sprintf('<a href="%1$s" title="%2$s"><time class="entry-date" datetime="%3$s" itemprop="datePublished">%4$s</time></a>',
+		$date = sprintf('<a href="%1$s" title="%2$s">'.
+										'<time class="entry-date" datetime="%3$s" itemprop="datePublished">%4$s</time></a>',
 										esc_url(get_permalink()),
 										esc_attr(get_the_time()),
 										esc_attr(get_the_date('c')),
@@ -38,13 +39,14 @@
 		$author = false;
 		if ($show_author) {
 			$author = sprintf('<span itemprop="author" itemscope itemtype="http://schema.org/Person">'.
-												'<a href="%1$s" title="%2$s" itemprop="name">%3$s</a></span>',
+												'<a href="%1$s" title="%2$s" itemprop="url">'.
+												'<span itemprop="name">%3$s</span></a></span>',
 												esc_url(get_author_posts_url(get_the_author_meta('ID'))),
 												esc_attr(sprintf(__('View all posts by %s'), get_the_author())),
 												get_the_author());
 		} // end if get author
 		?>
-			<div class="item-meta">
+			<div class="post-meta">
 				<p>
 					This entry was posted
 					<?php 
