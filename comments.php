@@ -27,7 +27,7 @@
 			<ul class="comment-list">
 				<?php 
 					// please note that the callback here
-					// will only work with style ul or ol]
+					// will only work with style ul or ol
 					// if you wish to use div then you'll need to rewrite the callback
 					wp_list_comments(array('style' => 'ul',
 																 'avatar_size'=> 0,
