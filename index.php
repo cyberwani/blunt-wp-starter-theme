@@ -25,7 +25,7 @@
 		get_header();
 		?>
 			<div id="content" itemscope itemtype="http://schema.org/Blog">
-				<h1 id="page-title">Blog</h1>
+				<h1 id="page-title"><?php echo __('Blog'); ?></h1>
 				<?php 
 					if (have_posts()) {
 						blunt_archive_nav('before');
