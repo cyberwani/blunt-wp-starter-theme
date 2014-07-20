@@ -22,9 +22,9 @@
 			<div class="clearfix"></div>
 		</div><!-- end #main -->
 		<?php 
-			include(dirname(__FILE__).'/inc/before-wp-footer.php');
+			include(dirname(__FILE__).'/include/before-wp-footer.php');
 			wp_footer();
-			include(dirname(__FILE__).'/inc/after-wp-footer.php');
+			include(dirname(__FILE__).'/include/after-wp-footer.php');
 		?>
 	</body>
 </html>

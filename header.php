@@ -16,13 +16,13 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<title><?php wp_title(); ?></title>
 		<?php 
-			include (dirname(__FILE__).'/inc/before-wp-head.php');
+			include (dirname(__FILE__).'/include/before-wp-head.php');
 			wp_head();
-			include (dirname(__FILE__).'/inc/after-wp-head.php');
+			include (dirname(__FILE__).'/include/after-wp-head.php');
 		?>
 	</head>
 	<body <?php body_class(); ?>>
-		<?php include (dirname(__FILE__).'/inc/after-body.php'); ?>
+		<?php include (dirname(__FILE__).'/include/after-body.php'); ?>
 		<div id="main" class="wrapper">
 			<div id="site-header">
 				<div id="logo"><a href="/"><?php bloginfo('name'); ?></a></div>
