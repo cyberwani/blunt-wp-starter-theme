@@ -17,7 +17,7 @@
 				<div id="content" itemscope itemtype="http://schema.org/Blog">
 					<div itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 						<?php 
-							$content_key = 'HEADER'.$_SERVER['REQUEST_URI'];
+							$content_key = 'CONTENT'.$_SERVER['REQUEST_URI'];
 							if (!apply_filters('blunt_cache_frag_check', false, $content_key)) {
 								blunt_post_nav('before');
 								?>
@@ -35,7 +35,7 @@
 			<?php 
 		} // end while have posts
 		// cache the sitebar and footer
-		$foot_key = 'HEADER'.$_SERVER['REQUEST_URI'];
+		$foot_key = 'FOOTER'.$_SERVER['REQUEST_URI'];
 		if (!apply_filters('blunt_cache_frag_check', false, $foot_key)) {
 			?>
         <div id="sidebar-after-content">
