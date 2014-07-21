@@ -53,11 +53,12 @@ realize that the client might some day want to create "Blog Posts".
 
 Custom post types and taxonomies solve the sorting mess, code bloat, excessive db 
 queries and complicate template files that are created when one tries to store all 
-content types together in a single post type. If you're creating more than a simple 
-brochure site that will have simple pages and a blog and you're not using custom 
-post types and taxonomies then ***YOU ARE DOING IT WRONG!*** It's time you learned 
-how to use custom post types and taxonomies or it's time for you to stop building 
-WP themes.
+content types together in a single post type. Not to mention making the admin easier 
+to navigate and simplifying site maintenance for the average user. If you're 
+creating more than a simple brochure site that will have simple pages and a blog 
+and you're not using custom post types and taxonomies then ***YOU ARE DOING IT 
+WRONG!*** and it's time you learned how to use custom post types and taxonomies 
+or it's really time for you to stop building WP themes.
 
 Check out [Custom Post Type UI](http://wordpress.org/plugins/custom-post-type-ui/).
 Its a plugin that makes the process of creating custom post types and taxonomies
