@@ -146,5 +146,5 @@ I have only implemented one example of fragment caching outside of full page in 
 theme. This example can be seen in single.php. Three areas of the page are being cached
 and the comments section of the page is left uncached so that it can remain dynamic and
 show new comments without needing to clear any part of the cache. In most cases I would 
-alter the caching on a template dependent on what going to be mostly static and what 
+alter the caching on a template dependent on what's going to be mostly static and what 
 will likely need to be refreshed on each page load.
