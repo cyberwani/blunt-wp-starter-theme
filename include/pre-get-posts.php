@@ -13,7 +13,7 @@
 		// only used on main query on front end of site
 		if (is_admin() || !$query || !is_a($query, 'WP_Query') ||
 			isset($query->query_vars['bypass_pre_get_posts']) ||
-			!is_main_query()) {
+			!!$query->is_main_query()) {
 			return;
 		}
 		
