@@ -25,7 +25,8 @@
 		<?php include (dirname(__FILE__).'/include/after-body.php'); ?>
 		<div id="main" class="wrapper">
 			<div id="site-header">
-				<div id="logo"><a href="/"><?php bloginfo('name'); ?></a></div>
+				<div id="logo"><a href="<?php 
+						echo trailingslashit(get_home_url()); ?>"><?php bloginfo('name'); ?></a></div>
 				<div id="top-nav">
 					<?php 
 						$args = array('theme_location' => 'top-menu',
